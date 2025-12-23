@@ -1,0 +1,17 @@
+name: Deploy automático
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Chamar Deploy 1
+        run: |
+          curl -X GET "http://62.171.187.238:3000/api/deploy/f9af01140a7cc8c2a7c036ec48b46257f6f48746fca83263"
+
